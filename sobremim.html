@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Sobre Mim</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="cabecalho-superior">
+            <h1 class="titulo">Meu portfolio</h1>
+        </div>
+        <hr class="linha-divisoria">
+
+    </header>
+
+    <main class="sobre-mim-container">
+        <h1 class="sobre-mim-titulo">Minha Jornada na Tecnologia</h1>
+        
+        <div class="sobre_mim_texto">
+            
+            <p>Desde criança, sempre tive uma ligação muito forte com tecnologia. Os computadores, os consoles e os jogos sempre fizeram parte do meu dia a dia
+                 — não apenas como forma de lazer, mas também como algo que despertava minha curiosidade e vontade de aprender mais.</p>
+            
+            <p>A área da computação sempre me atraiu, e desde cedo eu me imaginava trabalhando com isso, mesmo que de maneira ainda vaga. 
+                Apesar de ter demorado um pouco para ingressar na faculdade, essa escolha veio no momento certo.</p>
+            
+            <p>Estou um pouco mais velha do que a média dos calouros, mas acredito que isso tenha se tornado uma vantagem: hoje tenho uma mentalidade diferente,
+                 mais madura e determinada. Sei o que quero, e estou disposta a correr atrás.</p>
+            
+            <p>Me encontrei nesse curso, e tenho gostado muito de estudar. Sinto que estou finalmente dando forma a algo que sempre fez parte de mim.</p>
+        </div>
+        
+        <footer>
+            <p>Com entusiasmo,</p>
+            <p>Ayumi Duarte Fukita</p>
+        </footer>
+
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const footer = document.querySelector("footer");
+    
+            function checkFooterVisibility() {
+                const footerPosition = footer.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.0; // Dispara quando o footer está a 100% da tela
+        
+                if (footerPosition < screenPosition) {
+                    footer.classList.add("visible");
+                    window.removeEventListener("scroll", checkFooterVisibility);
+                }
+            }
+    
+            window.addEventListener("scroll", checkFooterVisibility);
+            checkFooterVisibility();
+        });
+    </script>
+</body>
+
+</html>

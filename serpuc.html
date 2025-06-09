@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ser PUCPR</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="cabecalho-superior">
+            <h1 class="titulo">Meu portfolio</h1>
+        </div>
+        <hr class="linha-divisoria">
+
+    </header>
+
+    <main class="sobre-mim-container">
+        <h1 class="sobre-mim-titulo">Ser PUCPR</h1>
+        
+        <div class="sobre_mim_texto">
+            
+            <p>Ser PUC-PR nunca esteve nos meus planos, mas desde o primeiro dia de aula fui acolhida de uma forma que me marcou 
+                profundamente. Senti, de imediato, um ambiente de inclusão, união e cuidado — algo que nunca tinha vivenciado em 
+                outro espaço educacional.</p>
+            
+            <p>A universidade demonstra, de maneira constante, uma preocupação genuína com o bem-estar e o desenvolvimento dos seus 
+                estudantes. O cuidado vai além da sala de aula, refletindo-se também no suporte emocional, acadêmico e na formação 
+                integral de cada aluno.</p>
+            
+            <p>Estar na PUC-PR é estar conectado com o mercado de trabalho, com ideias inovadoras e com profissionais que fazem a 
+                diferença em suas áreas. A universidade oferece uma formação atualizada e alinhada com os desafios do mundo real.</p>
+            
+            <p>Tenho a honra de aprender com professores que estão entre os melhores do Paraná — e, quem sabe, até do Brasil. 
+                São profissionais que não apenas dominam o conteúdo, mas que se dedicam a transmitir conhecimento com paixão, 
+                atenção e qualidade que poucos conseguem oferecer.</p>
+        </div>
+        
+        <footer>
+            <p>Com carinho,</p>
+            <p>Ayumi Duarte Fukita</p>
+        </footer>
+
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const footer = document.querySelector("footer");
+    
+            function checkFooterVisibility() {
+                const footerPosition = footer.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.0; // Dispara quando o footer está a 100% da tela
+        
+                if (footerPosition < screenPosition) {
+                    footer.classList.add("visible");
+                    window.removeEventListener("scroll", checkFooterVisibility);
+                }
+            }
+    
+            window.addEventListener("scroll", checkFooterVisibility);
+            checkFooterVisibility();
+        });
+    </script>
+</body>
+
+</html>
